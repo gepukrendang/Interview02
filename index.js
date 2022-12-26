@@ -2,6 +2,8 @@ import fs from "fs";
 
 import { formatDate, groupBy, groupByDate, getMetrics } from "./src/handler.js";
 
+let savedData = [];
+
 let fileString = fs.readFileSync("./data/sensor_data.json").toString();
 let fileObj = JSON.parse(fileString);
 
@@ -15,6 +17,18 @@ let sensorDataRoom1 = getMetrics(sensorByDateRoom1);
 let sensorDataRoom2 = getMetrics(sensorByDateRoom2);
 let sensorDataRoom3 = getMetrics(sensorByDateRoom3);
 
-console.log(sensorDataRoom1);
-console.log(sensorDataRoom2);
-console.log(sensorDataRoom3);
+savedData.push(
+  "room1",
+  sensorDataRoom1,
+  "room2",
+  sensorDataRoom2,
+  "room3",
+  sensorDataRoom3
+);
+
+fs.writeFile("sensorData.json", JSON.stringify(savedData, null, 2), (err) => {
+  if (err) console.log(err);
+  else {
+    console.log("File written successfully to sensorData.json\n");
+  }
+});
