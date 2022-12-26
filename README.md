@@ -27,7 +27,11 @@ Follow the following instructions to get this app running on your local web brow
    ```sh
     npm install
    ```
-3. Run the application with node.js by typing the following command to your terminal
+3. Move to the cloned directory
+   ```sh
+    cd Interview 02
+   ```
+4. Run the application with node.js by typing the following command to your terminal
    ```sh
    node index.js
    ```
