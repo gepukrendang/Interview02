@@ -1,0 +1,20 @@
+{
+  "name": "interview02",
+  "version": "1.0.0",
+  "description": "Node.js program to group sensors acquisition data by min, max, average, and median.",
+  "main": "/src/handler.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gepukrendang/Interview02.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gepukrendang/Interview02/issues"
+  },
+  "homepage": "https://github.com/gepukrendang/Interview02#readme"
+}
